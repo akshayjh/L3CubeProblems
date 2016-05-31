@@ -9,6 +9,8 @@ The programming problems are:
 Write a code that verifies - birthday paradox is indeed correct.   <br>
 (Note : Think of ways you could run 'random experiments'. We agree this problem is hard.)
 
+-----
+
 ###2. Simple version control 
 **GOAL**:
 Create a simple version control (svc) program called **`svc`**.
@@ -46,10 +48,14 @@ A sample flow is as follows:   <br>
 8. Delete the line hello  and then run `svc test.txt`   <br>
 9. Disp   <br>
 
+-----
+
 ###3.Write a program to list duplicate files from hard drive
 The aim of this assignment is to list all the duplicate files from the hard drive and give user option to remove them or merge them.
 
-###4) Textfs - A text based file system
+-----
+
+###4. Textfs - A text based file system
 Mr. Ramesh, programmer by profession is very obsessed with his room partner Mr. Suresh.  Suresh leaves no opportunity to break into and check out important and private files of Ramesh. One fine day Ramesh decides to implement his own file system Textfs that could store important files without revealing much information about them. Textfs will be a text based file system meaning all the data regarding contents of file system(meta-data) and the actual data of files will go in a single text file. The only principle that this file system is based on is - simplicity.
 
 As the only factor under consideration is simplicity and not efficiency he decides to write a user mode command line application. This application has following major goals :
