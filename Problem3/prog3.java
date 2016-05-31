@@ -63,7 +63,6 @@ public class prog3
       		if (listOfFiles[i].isFile())
 			{
 				count++;
-				//System.out.println("File " + listOfFiles[i].getName());
 				
 				String filename1="";
 				for(int j=0;j<paths.length;j++)
@@ -86,10 +85,6 @@ public class prog3
 				
             	filedata.put(listOfFiles[i].getName(),temp);
       		}
-			/*else if(listOfFiles[i].isDirectory())
-			{
-				System.out.println("Directory " + listOfFiles[i].getName());
-      		}*/
     	}
 	}
 	
@@ -103,7 +98,6 @@ public class prog3
 					continue;
 				if(entry.getValue().equals(entry2.getValue()))
 				{
-//					System.out.println("Duplicate files are: "+entry.getKey()+" and "+entry2.getKey());
 					duplicates.add(entry.getKey());
 					duplicates.add(entry2.getKey());
 				}
@@ -189,61 +183,3 @@ public class prog3
 		catch(Exception e){}
 	}
 }
-
-
-
-
-/*
-in main:
-		RunnableDemo R[]=new RunnableDemo[count];
-		for(int i=0;i<count;i++)
-		{
-			R[i]=new RunnableDemo(i, filedata, listOfFiles.length);
-			R[i].start();
-		}
-
-RunnableDemo class:
-class RunnableDemo implements Runnable {
-	private Thread t;
-	private int threadName;
-	private int listOfFilesLength;
-	private Map<String,String> filedata=new HashMap<String,String>();
-
-	RunnableDemo( int name, Map<String,String> filedata1, int len)
-	{
-		threadName = name;
-		filedata = filedata1;
-		listOfFilesLength=len;
-//		System.out.println("Creating " +  threadName );
-	}
-	
-	public void run() {
-//		System.out.println("Running " +  threadName );
-		String data[]=new String[listOfFilesLength-1];
-		int i=0;
-		for (Map.Entry<String, String> entry : filedata.entrySet())
-		{
-			if(i!=threadName)
-			{
-				data[i]=entry.getValue();
-				i++;
-			}
-			else
-				continue;
-		}
-		
-		for(i=0;i<listOfFilesLength-1;i++)
-			System.out.println(data[i]);
-//		System.out.println("Thread " +  threadName + " exiting.");
-	}
-
-	public void start ()
-	{
-//		System.out.println("Starting " +  threadName );
-		if (t == null)
-		{
-			t = new Thread (this, threadName, filedata, listOfFilesLength);
-			t.start ();
-		}
-	}
-}*/
