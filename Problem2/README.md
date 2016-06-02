@@ -3,6 +3,10 @@ To make the following program a command, execute the following steps:   <br>
 2. `sudo cp svc.py /usr/bin/`  <br>
 3. `sudo mv /usr/bin/svc.py /usr/bin/svc`  <br>
 
+**Usage**   <br>
+`svc `*`filename`* - to commit the file   <br>
+`svc `*`N`* - to display the Nth version of the file
+
 **Note**: Download all these files from the repository
 1. svc.py  <br>
 2. test.txt  <br>
